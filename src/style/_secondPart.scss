@@ -1,0 +1,192 @@
+@import "./variables";
+@import "./mixins";
+.secondPart{
+    width: 65%;
+    background-color: $White;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__hopefulbox{
+        height: 200px;
+        width: 1px;
+        @include respond(tab-port){
+            display: none
+        };
+    }
+    &__submit-div{
+        width: 370px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @include respond(tab-port){
+           margin-top: 60px;
+        }
+        @media only screen and (max-width: 455px) {
+            margin-left: -60px;
+        }
+        @media only screen and (max-width: 390px) {
+            width: 260px;
+            margin-left: -30px;
+        }
+        & img{
+            width:70px;
+        }
+        & button{
+            width: 100%;
+            border: none;
+            margin-top: 27px;
+        }
+        & h2{
+            font-weight: lighter;
+            letter-spacing: 1px;
+            margin-bottom: 0px;
+        }
+        & h3{
+            font-size: 16px;
+            color: $Dark-grayish-violet;
+            letter-spacing: 1px;
+        }
+    }
+
+
+    & input{
+        outline: none;
+        border: 1px solid $Dark-grayish-violet;
+        padding: 10px 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &[type=number]{
+            -moz-appearance: textfield;
+        }
+        &:focus{
+            border: 1px solid $Lineargradient1thcolor;
+        }
+        &::placeholder {color: darken($color: $Light-grayish-violet, $amount: 20) ;}
+        &:-ms-input-placeholder { color: darken($color: $Light-grayish-violet, $amount: 20) ;}
+        &::-ms-input-placeholder { color: darken($color: $Light-grayish-violet, $amount: 20) ;}
+    }
+    & label{
+        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    & button{
+        padding: 13px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        color: $White;
+        background-color:  darken($color: $Lineargradient2ndcolor, $amount: 20) ;
+    }
+
+
+    & form{
+        width: 370px;
+        margin: 0 auto;
+        @include respond(tab-port){
+            margin-top: 45px;
+            width: 370px;
+        };
+        @include respond(phone){
+            margin-top: 50px;
+            width: 260px;
+        };
+        @media only screen and (max-width: 340px) {
+                margin-left:  -30px;
+                
+        }
+        & .big-p{
+            width: 170px;
+        }
+        & p{
+            font-size: 11px;
+            margin-top: 5px;
+            margin-bottom: -10px;
+            color: $Red ;
+            width: 100px;
+        }
+    }
+    &__form--child{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        @include respond(phone){
+            margin-top: 10px;       
+        };
+        &:nth-child(1){
+            margin-top: 0;
+        }
+    }
+    &__form--child-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+        
+        & div:first-child{
+            width: 48%;
+            & div{
+                display: flex;
+                & div{
+                    display: flex;
+                    flex-direction: column;
+                    & input{
+                        width: 55px;
+                        @include respond(phone){
+                            width: 30px;
+                        };
+                    }
+                    &:nth-child(2){
+                        margin-left: 50px;
+                        @include respond(phone){
+                            margin-left: 30px;
+                        };
+                    }
+                }
+            }
+        }
+        & div:nth-child(2){
+            width: 48%;
+
+          
+       
+            & input{
+                width: 87.5%;
+                @include respond(phone){
+                    margin-bottom: 0;
+                    
+                };
+                @media only screen and (max-width: 340px) {
+                    width: 84.5%;       
+                }
+            }
+        }
+
+    }
+}
+
+
+.redBorder{
+    border: 1px solid $Red !important;
+}
+
+
+
+
+
+.cvc-class{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

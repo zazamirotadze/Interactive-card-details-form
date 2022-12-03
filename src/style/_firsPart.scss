@@ -1,0 +1,143 @@
+@import "./variables";
+@import "./mixins";
+
+.firstPart{
+    background-image: url(../../public/images/bg-main-desktop.png);
+    background-size: cover;
+    width: 35%;
+    position: relative;
+    @include respond(tab-port){
+        width: 100%;
+        height: 220px;
+        background-image: url(../../public/images/bg-main-mobile.png);
+    };
+    @include respond(phone){
+        height: 200px;
+    };
+    &__image1--div{
+        position: absolute;
+        top: 17%;
+        left: 40%;
+        z-index: 1;
+        @include respond(tab-land){
+            left: 10%;
+        }
+        @include respond(tab-port){
+            z-index: 2;
+            top: 50%;
+        };
+        @media only screen and (max-width: 400px) {
+            left: 9%;
+        }
+
+        &--big-circle{
+            width: 40px;
+            height: 40px;
+            background-color: $White;
+            position: absolute;
+            top:13%;
+            left: 8%;
+            border-radius: 50%;
+      
+        }
+        &--small-circle{
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: 1px solid $White;
+            position: absolute;
+            top:17%;
+            left: 23%;
+            border-radius: 50%;
+            @include respond(tab-port){
+                left:24%;
+                top:19%;
+            };
+            @media only screen and (max-width: 340px) {
+                left:27%;}
+        }
+        &--card-number{
+            color: $Light-grayish-violet;
+            position: absolute;
+            top: 55%;
+            font-size: 23px;
+            left: 8%;
+            letter-spacing: 2px;
+            @include respond(tab-port){
+                font-size: 17px;
+            };
+            @media only screen and (max-width: 340px) {
+                font-size: 13px;}
+        }
+        &--card-name,&--MM,&--YY{
+            color: $Light-grayish-violet;
+            position: absolute;
+            top: 77%;
+            font-size: 13px;
+            letter-spacing: 2px;
+            @media only screen and (max-width: 400px) {
+                font-size: 12px;
+            }
+        }
+        &--card-name{
+            left: 8%;
+            text-transform: uppercase;
+        }
+        &--MM{
+            right: 13%;
+        }
+        &--YY{
+            right: 7%;
+
+            @include respond(tab-port){
+                right: 5%;
+            }
+            @media only screen and (max-width: 400px) {
+                right: 4%;
+            }
+        }
+    }
+    &__image2--div{
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        z-index: 1;
+        @include respond(tab-land){
+            left: 15%;
+        }
+        @include respond(tab-port){
+            top:5%;
+            left: 27%;
+        };
+        @media only screen and (max-width: 400px) {
+            left: 9%;
+        }
+
+        &-cvc{
+            color: $Light-grayish-violet;
+            position: absolute;
+            top: 44%;
+            right: 13%;
+            font-size: 13px;
+            letter-spacing: 2px; 
+            @include respond(tab-port){
+                top: 42%;
+            };
+
+    
+        }
+    }
+    & img{
+        height: 200px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        @include respond(tab-port){
+            height: 150px;
+        };
+        @include respond(phone){
+            height: 150px;
+        };
+        @media only screen and (max-width: 340px) {
+           height: 130px;}
+    }
+
+}
