@@ -133,11 +133,13 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 20px;
-        
+  
         & div:first-child{
             width: 48%;
+         
             & div{
                 display: flex;
+          
                 & div{
                     display: flex;
                     flex-direction: column;
@@ -186,7 +188,14 @@
 
 
 .cvc-class{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+
+    width: 175px !important;
+    @include respond(phone){
+        margin-top: 22px;
+        width: 115px !important;
+    };
+}
+
+.cvc-class--div{
+    margin-top: 3px;
 }

@@ -411,7 +411,15 @@ body {
 }
 
 .cvc-class {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: 175px !important;
+}
+@media (max-width: 600px) {
+  .cvc-class {
+    margin-top: 22px;
+    width: 115px !important;
+  }
+}
+
+.cvc-class--div {
+  margin-top: 3px;
 }/*# sourceMappingURL=index.css.map */

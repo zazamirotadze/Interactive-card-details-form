@@ -237,9 +237,9 @@ const Form = ({formData, setFormData}) => {
             </div>
           </div>
         </div>
-          <div className='cvc-class'>
+          <div className='cvc-class--div'>
             <label htmlFor='CVC' >CVC</label>
-          
+            <div className='cvc-class'>
             <input 
               onClick={errorBorderForcardCVC}
               className={isEmpty.cvcNumIsEmpty || isWrong.cvcNumIsWrong ?"redBorder": ""}
@@ -251,7 +251,7 @@ const Form = ({formData, setFormData}) => {
               maxLength={3} 
               onChange={handleChange}
             />
-          
+            </div>
             {isEmpty.cvcNumIsEmpty &&<p>Can't be blank</p>}
             {isWrong.cvcNumIsWrong &&<p>Wrong format, numbers only</p>}
           </div>
